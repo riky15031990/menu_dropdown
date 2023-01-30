@@ -1,48 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="preconect" href="https://fonts.googleapis.com">
-  <link rel="preconect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./CSS/style.css">
+    <title>Landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <nav class="nav container">
-    <img src="./images/logo.svg" class="img" alt="">
-    <div class="nav_hamburguer"></div>
+    <link rel="preconect" href="https://fonts.googleapis.com" />
+    <link rel="preconect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
 
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav container">
+      <img src="./images/logo.svg" class="nav_img" alt="" />
 
-  </nav>
+      <div class="nav_hamburguer"></div> <!--cambiara de imagen si le damos click o no -->
 
-  Features
-  Company
-  Careers
-  About
+      <div class="nav_overlay"> <!--contenedor para mostrar el efecto de la capa negra-->
+        <ul class="nav_menu">
+          
+          <li class="nav_item">
+            <span class="nav_parent">Features
+              <img src="./images/icon-arrow-down.svg" class="nav_arrow" />
+            </span>
 
-  Login
-  Register
+            <ul class="nav_inner">
+              
+            <li class="nav_dropdown ">
+                <a href="#" class="nav_link">
+                  <img src="./images/icon-todo.svg" class="nav_ilustration" />
+                  To do list
+                </a>
+              
+              </li>
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link">
+                  <img src="./images/icon-calendar.svg" class="nav_ilustration"/>
+                  calendar
+                </a>
+              </li>
 
-  Make remote work
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link">
+                  <img src="./images/icon-reminders.svg" class="nav_ilustration"/>
+                  Reminders
+                </a>
+              </li>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link">
+                  <img src="./images/icon-planning.svg"class="nav_ilustration"/>
+                  Planing
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav_item">
+            <span class="nav_parent">Company
+              <img src="./images/icon-arrow-down.svg" class="nav_arrow" />
+            </span>
 
-  Learn more
-  
-  
-</body>
+            <ul class="nav_inner">
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link"> History </a>
+              </li>
+
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link"> Our team </a>
+              </li>
+
+              <li class="nav_dropdown">
+                <a href="#" class="nav_link"> Blog </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">Carrers</a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#" class="nav_link">About</a>
+          </li>
+
+          <li class="nav_login">
+            <a href="#" class="nav_sign">Login</a>
+          </li>
+
+          <li class="nav_login nav_login--border">
+            <a href="#" class="nav_sign">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="main_gird">
+        
+        <picture class="main_picture">
+          <source srcset="./images/image-hero-desktop.png" class="main_img"
+          media="(min-width:768px)">
+      
+          <img src="./images/image-hero-mobile.png" class="main_img" >
+        </picture>
+        <article class="main_article">
+          <div class="main texts">
+            <h1 class="main_title">Make remote work</h1>
+            <p class="main_paragraph">Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar.</p>
+    <a href="" class="main_cta">Learn more</a>
+          </div>
+          <div class="main_brands">
+            <img src="./images/client-databiz.svg" class="main_brand">
+            <img src="./images/client-audiophile.svg" class="main_brand">
+            <img src="./images/client-meet.svg" class="main_brand">
+            <img src="./images/client-maker.svg" class="main_brand">
+          </div>
+        </article>
+      
+      </section>
+    </main>
+
+     
+
+    <script src="./js/menu.js"></script>
+  </body>
 </html>
